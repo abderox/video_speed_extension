@@ -15,7 +15,7 @@ const init = function () {
     injectElement.className = 'ember-view';
     injectElement.id="ember110411"
     injectElement.innerHTML = '<div class="course-material-single"> <div class="course-material-header"> <span class="course-material-name material-name-alone">Video speed extension</span> '+buttons+' </div></div>';
-    console.log(subject.children[1])
+    
     if(subject.children[1]===undefined)
     {
       subject.appendChild(injectElement)
