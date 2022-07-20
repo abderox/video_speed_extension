@@ -1,8 +1,8 @@
 
 
-init = function () {
+func = () => {
+  if (window.location.href.includes('courses.algofoundry.studio/course') && document.getElementById("ember110411") === null) {
 
-  if (window.location.href.includes('courses.algofoundry.studio/course')) {
     subject = document.querySelector('.course-material-lists');
     buttons = `<button onclick="document.querySelector('video').playbackRate = 1;" class="btn btn-theme-filled">x1</button>` +
       `<button onclick="document.querySelector('video').playbackRate = 1.25;" class="btn btn-theme-filled">x1.25</button>` +
@@ -25,18 +25,11 @@ init = function () {
       subject.insertBefore(injectElement, subject.children[1]);
     }
 
+
+
   }
-
-
 }
-var video = null
-window.onload = () => {
-
-  setTimeout(() => {
-
-    init()
-  }, 5000);
-}
+func()
 
 timeout = null;
 document.addEventListener("DOMSubtreeModified", function () {
@@ -51,7 +44,7 @@ document.addEventListener("DOMSubtreeModified", function () {
     timeout = setTimeout(() => {
       if (injected === null) {
 
-        init()
+        func()
       }
 
     }, 1000);
@@ -59,6 +52,9 @@ document.addEventListener("DOMSubtreeModified", function () {
   }
 
 }, false);
+
+
+
 
 
 

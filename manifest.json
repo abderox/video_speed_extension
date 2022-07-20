@@ -1,14 +1,30 @@
 {
   "name": "Video accessories extension",
-  "version": "0.01",
-  "description": "For videos that lack of user facilities , including playbackRate",
+  "version": "0.0.0.1",
+  "description": "For videos that lack of user facilities , including playbackRate {author : 'ABDELHADI MOUZAFIR'}",
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["contentScript.js"],
-      "run_at": "document_end"
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "contentScript.js"
+      ],
+      "run_at": "document_idle"
     }
   ],
-  "host_permissions": ["<all_urls>"],
-  "manifest_version": 3
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "scripting",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "manifest_version": 3,
+  "action": {
+    "default_title": "Click to activate"
+  }
 }
