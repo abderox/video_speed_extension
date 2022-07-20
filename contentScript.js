@@ -30,13 +30,13 @@ init = function () {
 
 }
 
-window.onload = () => {
+// window.onload = () => {
 
-  setTimeout(() => {
+//   setTimeout(() => {
 
-    init()
-  }, 5000);
-}
+//     init()
+//   }, 5000);
+// }
 
 timeout = null;
 document.addEventListener("DOMSubtreeModified", function () {
