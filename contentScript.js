@@ -29,7 +29,7 @@ init = function () {
 
 
 }
-var video = null
+
 window.onload = () => {
 
   setTimeout(() => {
