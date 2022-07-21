@@ -4,18 +4,21 @@ init = function () {
 
   if (window.location.href.includes('courses.algofoundry.studio/course')) {
     subject = document.querySelector('.course-material-lists');
-    buttons = `<button onclick="document.querySelector('video').playbackRate = 1;" class="btn btn-theme-filled">x1</button>` +
-      `<button onclick="document.querySelector('video').playbackRate = 1.25;" class="btn btn-theme-filled">x1.25</button>` +
-      `<button onclick="document.querySelector('video').playbackRate = 1.5;" class="btn btn-theme-filled">x1.5</button>` +
-      `<button onclick="document.querySelector('video').playbackRate = 2;" class="btn btn-theme-filled">x2</button>` +
-      `<button onclick="document.querySelector('video').currentTime += 5;" class="btn btn-theme-dark-filled">+5s</button>` +
-      `<button onclick="document.querySelector('video').currentTime -= 5;" class="btn btn-theme-dark-filled">-5s</button>`
+    buttons =
+      `<button onclick="document.querySelector('video').currentTime += 5;" class="btn btn-theme-dark-filled" style= "background-color : #3b41530f !important ; margin-right : 4px !important;">+5s</button>` +
+      `<button onclick="document.querySelector('video').currentTime -= 5;" class="btn btn-theme-dark-filled" style= "background-color : #3b41530f !important ; ">-5s</button>`
 
+    select = `<select class="form-control" style="border :2px solid   #23aa91 !important ; width : 20% ; font-size : 16px !important; margin-right : 4px" id="custom" onchange="document.querySelector('video').playbackRate = this.options[this.selectedIndex].value;">
+      <option value="1">Normal</option>
+      <option value="1.25">x1.25</option>
+      <option value="1.5">x1.5</option>
+      <option value="2">x2</option>
+    </select>`
 
     const injectElement = document.createElement('li');
     injectElement.className = 'ember-view';
     injectElement.id = "ember110411"
-    injectElement.innerHTML = '<div class="course-material-single"> <div class="course-material-header"> <span class="course-material-name material-name-alone">Video speed extension</span> ' + buttons + ' </div></div>';
+    injectElement.innerHTML = '<div class="course-material-single"> <div class="course-material-header"> <span class="course-material-name material-name-alone">Video speed extension</span> ' + select + buttons + ' </div></div>';
 
     if (subject.children[1] === undefined) {
       subject.appendChild(injectElement)
