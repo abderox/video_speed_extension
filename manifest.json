@@ -1,6 +1,6 @@
 {
   "name": "Video accessories extension",
-  "version": "0.0.0.2",
+  "version": "0.0.0.3",
   "description": "For videos that lack of user facilities , including playbackRate {author : 'ABDELHADI MOUZAFIR'}",
   "content_scripts": [
     {
@@ -23,6 +23,12 @@
   "host_permissions": [
     "https://courses.algofoundry.studio/"
   ],
+  "icons": {
+    "16": "icon128-16_x_16.png",
+    "32": "icon128-32_x_32.png",
+    "48": "icon128-48_x_48.png",
+    "128": "icon128.png"
+  },
   "manifest_version": 3,
   "action": {
     "default_title": "Click to activate"
