@@ -1,6 +1,6 @@
 {
   "name": "Video accessories extension",
-  "version": "0.0.0.3",
+  "version": "0.0.0.4",
   "description": "For videos that lack of user facilities , including playbackRate {author : 'ABDELHADI MOUZAFIR'}",
   "content_scripts": [
     {
