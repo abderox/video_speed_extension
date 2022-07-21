@@ -5,7 +5,7 @@
   "content_scripts": [
     {
       "matches": [
-        "<all_urls>"
+        "https://courses.algofoundry.studio/*"
       ],
       "js": [
         "contentScript.js"
@@ -21,7 +21,7 @@
     "activeTab"
   ],
   "host_permissions": [
-    "<all_urls>"
+    "https://courses.algofoundry.studio/"
   ],
   "manifest_version": 3,
   "action": {
