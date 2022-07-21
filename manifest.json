@@ -21,7 +21,7 @@
     "activeTab"
   ],
   "host_permissions": [
-    "https://courses.algofoundry.studio/"
+    "https://courses.algofoundry.studio/*"
   ],
   "icons": {
     "16": "icon128-16_x_16.png",
