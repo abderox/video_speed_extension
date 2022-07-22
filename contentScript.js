@@ -55,6 +55,7 @@ document.addEventListener("DOMSubtreeModified", function () {
       if (injected === null) {
 
         init()
+
       }
 
     }, 1000);
@@ -62,6 +63,39 @@ document.addEventListener("DOMSubtreeModified", function () {
   }
 
 }, false);
+var doublePress = 0;
+document.onkeydown = function (e) {
+ 
+  var playStaus = document.querySelector('video').paused;
+  switch (e.code) {
+    case "ArrowRight":
+      if (doublePress != 0 && e.code === "ArrowRight") {
+        document.querySelector('video').currentTime += 5;
+        doublePress = 0;
+      } else {
+        doublePress = setTimeout('doublePress = 0;', 300);
+        document.querySelector('video').currentTime += 5;
+      }
+      break;
+    case "ArrowLeft":
 
-
-
+      if (doublePress != 0 && e.code === "ArrowRight") {
+        document.querySelector('video').currentTime -= 5;
+        doublePress = 0;
+      } else {
+        doublePress = setTimeout('doublePress = 0;', 300);
+        document.querySelector('video').currentTime -= 5;
+      }
+      break;
+    case "Space":
+      e.preventDefault();
+      if (playStaus) {
+        document.querySelector('video').play();
+        break;
+      }
+      document.querySelector('video').pause();
+      break;
+    default: ""
+      break;
+  }
+};

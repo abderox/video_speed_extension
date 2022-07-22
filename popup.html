@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <style>
+    <head>
+        <script src="popup.js"></script>
+        <style>
     html , body {
-      min-height: 10em;
+      min-height: 15em;
       min-width: 30em;
       background: #408080;
     }
       
       * {
         box-sizing: border-box;
+      }
+      pre {
+        fontsize: 14px
       }
       
       .bg-image {
@@ -59,17 +63,29 @@
         margin-left : 5px;
         margin-top : 5px
       }
-  </style>
-</head>
-<body>
-    <div class="bg-image"></div>
-
-    <div class="bg-text">
-        <div class="inline"><h1>Hello there </h1><img width="40px" class="imgip" src="https://github.githubassets.com/images/icons/emoji/trollface.png" alt="emoji" /></div>
-      
-      <a target="_blank" href="https://github.com/abderox/video_speed_extension">Source code </a>
-      <p>Video accessory extension v0.0.4</p>
-      <pre>abderox-2022</pre>
-    </div>
-</body>
+        </style>
+    </head>
+    <body>
+        <div class="bg-image"></div>
+        <div class="bg-text">
+            <div class="inline">
+                <h1>Hello there</h1>
+                <img width="40px"
+                     class="imgip"
+                     src="https://github.githubassets.com/images/icons/emoji/trollface.png"
+                     alt="emoji"/>
+            </div>
+            <pre>
+        Move forward 5s on ArrowRight press and 10s on double press 
+        Rewind 5s on ArrowLeft press and 10s on double press 
+        Play/Pause on space press
+    </pre>
+            <a target="_blank"
+               href="https://github.com/abderox/video_speed_extension">Source code</a>
+            <p>
+                Video accessory extension v0.0.4
+            </p>
+            <pre>abderox-2022</pre>
+        </div>
+    </body>
 </html>
