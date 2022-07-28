@@ -12,13 +12,14 @@ try {
   //   }
   // });
 
-  
+
   chrome.action.onClicked.addListener((tab) => {
+
     chrome.scripting.executeScript({
       files: ['contentScript_.js'],
       target: { tabId: tab.id }
     });
-   
+
   });
 
 

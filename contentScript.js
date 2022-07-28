@@ -65,7 +65,7 @@ document.addEventListener("DOMSubtreeModified", function () {
 }, false);
 var doublePress = 0;
 document.onkeydown = function (e) {
- 
+
   var playStaus = document.querySelector('video').paused;
   switch (e.code) {
     case "ArrowRight":
@@ -78,7 +78,6 @@ document.onkeydown = function (e) {
       }
       break;
     case "ArrowLeft":
-
       if (doublePress != 0 && e.code === "ArrowRight") {
         document.querySelector('video').currentTime -= 5;
         doublePress = 0;
